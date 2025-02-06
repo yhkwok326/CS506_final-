@@ -3,7 +3,7 @@
 # Alzheimer's Disease MRI Classification Project
 
 ## Description of the Project
-We want to develop a deep learning-based system to automatically classify different behaviors of Alzheimer's disease using brain MRI scans. 
+We want to develop a deep learning-based system to automatically classify different stages (Mild_Demented,Moderate_Demented,Non_Demented,Very_Mild_Demented) of Alzheimer's disease using brain MRI scans. 
 
 ## Goals
 1. Build a machine learning model that can classify Alzheimer's disease stages from MRI scans with accuracy exceeding 90%
@@ -14,7 +14,7 @@ We want to develop a deep learning-based system to automatically classify differ
 ### Data Sources
 1. Primary Dataset: Kaggle Alzheimer's MRI Dataset
    - Contains labeled MRI scans of brain
-   - Multiple classes representing different behaviors of Alzheimer's
+   - Multiple classes representing different stages of Alzheimer's
    - 6400 images across all classes
    
 
