@@ -3,7 +3,7 @@
 # Alzheimer's Disease MRI Classification Project
 
 ## Description of the Project
-We wnat to develop a deep learning-based system to automatically classify different stages of Alzheimer's disease using brain MRI scans. 
+We want to develop a deep learning-based system to automatically classify different behaviors of Alzheimer's disease using brain MRI scans. 
 
 ## Goals
 1. Build a machine learning model that can classify Alzheimer's disease stages from MRI scans with accuracy exceeding 90%
@@ -14,9 +14,9 @@ We wnat to develop a deep learning-based system to automatically classify differ
 ### Data Sources
 1. Primary Dataset: Kaggle Alzheimer's MRI Dataset
    - Contains labeled MRI scans of brain
-   - Multiple classes representing different stages of Alzheimer's
-   - Approximately 6000 images across all classes
-   - Pre-processed and standardized medical imaging data
+   - Multiple classes representing different behaviors of Alzheimer's
+   - 6400 images across all classes
+   
 
 2. Supplementary Datasets:
    - ADNI (Alzheimer's Disease Neuroimaging Initiative) database
@@ -38,7 +38,7 @@ We wnat to develop a deep learning-based system to automatically classify differ
 2. Model Optimization:
    - Hyperparameter tuning 
 
-## Data Visualization
+## Data Visualization ( HMMM?? )
 1. Pre-training Visualizations:
    - Sample MRI visualizations across different classes
    - Distribution plots of pixel intensities
@@ -53,15 +53,9 @@ We wnat to develop a deep learning-based system to automatically classify differ
    - t-SNE plots of learned feature representations
    - Feature maps from different CNN layers
 
-3. Results Visualization:
-   - Interactive dashboard showing model predictions
-   - Attention maps highlighting critical regions
-   - Confidence scores for each classification
-   - Comparative visualization of true vs. predicted labels
-
 ## Test Plan
   Data Splitting Strategy:
    - Training set: 80% of total data
    - Testing set: 20% of total data
    - Within training set, 10% used for validation
-   -  Cross-validation:
+   - Cross-validation
