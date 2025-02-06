@@ -12,7 +12,7 @@ We want to develop a deep learning-based system to automatically classify differ
 
 ## Data Collection
 ### Data Sources
-1. Primary Dataset: Kaggle Alzheimer's MRI Dataset
+1. Primary Dataset: Kaggle Alzheimer's MRI Dataset (https://www.kaggle.com/datasets/borhanitrash/alzheimer-mri-disease-classification-dataset/data)
    - Contains labeled MRI scans of brain
    - Multiple classes representing different stages of Alzheimer's
    - 6400 images across all classes
