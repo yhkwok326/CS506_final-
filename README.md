@@ -41,20 +41,15 @@ Our goal of this project is to implement deep learning-based system for automate
 
 ### Feature Extraction
 - possible feautres
-     1. Hippocampal Region:
+        1. Hippocampal Region:
          - Track the progressive atrophy visible in the highlighted areas
          - Measure volumetric changes across stages
          - Analyze shape deformation patterns
-
-
-      2. Ventricle Size:
+        2. Ventricle Size:
          - Monitor the enlargement of ventricles   
          - Measure rate of expansion between stages
          - Compare bilateral differences
-
-
-      3. Temporal Lobe:
-
+        3. Temporal Lobe:
          - Analyze gray matter density changes
          - Track cortical thickness reduction
          - Measure regional volume loss
