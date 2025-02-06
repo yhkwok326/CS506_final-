@@ -2,14 +2,14 @@
 
 # Alzheimer's Disease MRI Classification Project
 
-## Description of the Project
-We want to develop a deep learning-based system to automatically classify different stages (Mild_Demented,Moderate_Demented,Non_Demented,Very_Mild_Demented) of Alzheimer's disease using brain MRI scans. 
 
-## Goals
-1. Build/use a machine learning model that can classify Alzheimer's disease stages from MRI scans with accuracy exceeding 90%
-2. Develop a system that can process and analyze MRI scans
-3. Generate attention maps highlighting the specific brain regions influencing the classification decision
 
+
+# Project Goals
+
+### Description of the Project
+
+Our goal of this project is to implement deep learning-based system for automated classification of Alzheimer's disease stages using brain MRI scans. The system can categorize scans into four stages: Non-Demented, Very Mild Demented, Mild Demented, and Moderate Demented.
 
 ### Data Collection
 
@@ -37,7 +37,27 @@ We want to develop a deep learning-based system to automatically classify differ
    - Deep Learning using Convolutional Neural Networks (CNN) Tensorflow/Pytorch 
    
 2. Model Optimization:
-   - Hyperparameter tuning 
+   - Hyperparameter tuning
+
+### Feature Extraction
+- possible feautres
+     1. Hippocampal Region:
+         - Track the progressive atrophy visible in the highlighted areas
+         - Measure volumetric changes across stages
+         - Analyze shape deformation patterns
+
+
+      2. Ventricle Size:
+         - Monitor the enlargement of ventricles   
+         - Measure rate of expansion between stages
+         - Compare bilateral differences
+
+
+      3. Temporal Lobe:
+
+         - Analyze gray matter density changes
+         - Track cortical thickness reduction
+         - Measure regional volume loss
 
 ### Data Visualization ( HMMM?? )
 1. Pre-training Visualizations:
