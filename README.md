@@ -54,19 +54,13 @@ Our goal of this project is to implement deep learning-based system for automate
    - Track cortical thickness reduction
    - Measure regional volume loss
 
-### Data Visualization ( HMMM?? )
+### Data Visualization ( TBD )
 1. Pre-training Visualizations:
    - Sample MRI visualizations across different classes
-   - Distribution plots of pixel intensities
-   - Heat maps showing class distribution
-   - Box plots of image statistics across classes
 
 2. Model Analysis Visualizations:
-   - Confusion matrix with interactive hover details
    - ROC curves and AUC scores for each class
-   - Grad-CAM visualizations showing model focus areas
    - Interactive learning curves (training vs. validation)
-   - t-SNE plots of learned feature representations
    - Feature maps from different CNN layers
 
 ### Test Plan
