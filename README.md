@@ -69,4 +69,3 @@ Our goal of this project is to implement deep learning-based system for automate
    - Training set: 70% of total data
    - Testing set: 20% of total data
    - 10% of the data used for validation
-   - Cross-validation
