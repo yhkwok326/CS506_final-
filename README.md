@@ -28,7 +28,6 @@ Our goal of this project is to implement deep learning-based system for automate
 2. Application for access to ADNI and OASIS databases
 3. Data preprocessing pipeline:
    - Image standardization
-   - Noise reduction
    - Normalization
    - Data augmentation through rotation, scaling, and intensity adjustments
 
