@@ -71,7 +71,7 @@ Our goal of this project is to implement deep learning-based system for automate
 
 ### Test Plan
   Data Splitting Strategy:
-   - Training set: 80% of total data
+   - Training set: 70% of total data
    - Testing set: 20% of total data
-   - Within training set, 10% used for validation
+   - 10% of the data used for validation
    - Cross-validation
