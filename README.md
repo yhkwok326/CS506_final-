@@ -59,6 +59,7 @@ Our goal of this project is to implement deep learning-based system for automate
    - Sample MRI visualizations across different classes
 
 2. Model Analysis Visualizations:
+   - Confusion matrix
    - ROC curves and AUC scores for each class
    - Interactive learning curves (training vs. validation)
    - Feature maps from different CNN layers
