@@ -25,7 +25,7 @@ Our goal of this project is to implement deep learning-based system for automate
 
 ### Data Cleaning
 1. Direct download from Kaggle platform
-2. Application for access to ADNI and OASIS databases
+2. ADNI and OASIS databases (Maybe, we are trying to get access )
 3. Data preprocessing pipeline:
    - Image standardization
    - Normalization
