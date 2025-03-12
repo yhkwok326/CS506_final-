@@ -15,8 +15,9 @@ Our goal of this project is to implement deep learning-based system for automate
 
 1. Primary Dataset:
    
-   Dataset 1: https://www.kaggle.com/datasets/lukechugh/best-alzheimer-mri-dataset-99-accuracy/data
-   Dataset 2: Kaggle Alzheimer's MRI Dataset (https://www.kaggle.com/datasets/borhanitrash/alzheimer-mri-disease-classification-dataset/data)
+   1. Dataset 1: https://www.kaggle.com/datasets/lukechugh/best-alzheimer-mri-dataset-99-accuracy/data
+      
+   2. Dataset 2: Kaggle Alzheimer's MRI Dataset (https://www.kaggle.com/datasets/borhanitrash/alzheimer-mri-disease-classification-dataset/data)
    - Contains labeled MRI scans of brain
    - Multiple classes representing different stages of Alzheimer's
    - 6400 images across all classes
