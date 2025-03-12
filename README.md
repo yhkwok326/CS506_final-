@@ -13,13 +13,16 @@ Our goal of this project is to implement deep learning-based system for automate
 
 ### Data Collection
 
-1. Primary Dataset: Kaggle Alzheimer's MRI Dataset (https://www.kaggle.com/datasets/borhanitrash/alzheimer-mri-disease-classification-dataset/data)
+1. Primary Dataset:
+   
+   Dataset 1: https://www.kaggle.com/datasets/lukechugh/best-alzheimer-mri-dataset-99-accuracy/data
+   Dataset 2: Kaggle Alzheimer's MRI Dataset (https://www.kaggle.com/datasets/borhanitrash/alzheimer-mri-disease-classification-dataset/data)
    - Contains labeled MRI scans of brain
    - Multiple classes representing different stages of Alzheimer's
    - 6400 images across all classes
    
-
-2. Supplementary Datasets:
+    
+3. Supplementary Datasets:
    - ADNI (Alzheimer's Disease Neuroimaging Initiative) database
    - OASIS (Open Access Series of Imaging Studies)
 
