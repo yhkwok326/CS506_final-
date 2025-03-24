@@ -8,7 +8,7 @@ This project aims to implement deep learning-based system for automated classifi
 
 We began the pipeline by integrating two distinct MRI datasets: a [folder based dataset](https://www.kaggle.com/datasets/lukechugh/best-alzheimer-mri-dataset-99-accuracy/data) containing MRI images in standard image formats (JPEG, PNG) organized by impairment level folders, and a [parquet based dataset](https://www.kaggle.com/datasets/borhanitrash/alzheimer-mri-disease-classification-dataset/data) containing binary image data stored in Apache Parquet format. Both datasets contain brain MRI scans used for dementia classification with four severity levels: Non-Demented (Label 2), Very Mild Demented (Label 3), Mild Demented (Label 0), and Moderate Demented (Label 1). In total, 6400 photos were extracted across all four classes. 
 
-![brain samples](https://github.com/yhkwok326/CS506_final/blob/main/brain_samples.png?raw=true)
+![brain samples](https://github.com/yhkwok326/CS506_final/blob/main/images/brain_samples.png?raw=true)
 
 ### Data Cleaning
 1. Direct download from Kaggle platform
