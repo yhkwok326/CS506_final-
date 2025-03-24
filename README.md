@@ -1,4 +1,4 @@
-# Alzheimer's Disease MRI Classification Project
+# Alzheimer's Disease MRI Classification
 
 ## Summary 
 
@@ -6,7 +6,7 @@ This project aims to implement deep learning-based system for automated classifi
 
 ## Data Collection
 
-We began the pipeline by integrating two distinct MRI datasets: a [folder based dataset](https://www.kaggle.com/datasets/lukechugh/best-alzheimer-mri-dataset-99-accuracy/data) containing MRI images in standard image formats (JPEG, PNG) organized by impairment level folders, and a [parquet based dataset](https://www.kaggle.com/datasets/borhanitrash/alzheimer-mri-disease-classification-dataset/data) containing binary image data stored in Apache Parquet format. Both datasets contain brain MRI scans used for dementia classification with four severity levels: Non-Demented (Label 2), Very Mild Demented (Label 3), Mild Demented (Label 0), and Moderate Demented (Label 1). 
+We began the pipeline by integrating two distinct MRI datasets: a [folder based dataset](https://www.kaggle.com/datasets/lukechugh/best-alzheimer-mri-dataset-99-accuracy/data) containing MRI images in standard image formats (JPEG, PNG) organized by impairment level folders, and a [parquet based dataset](https://www.kaggle.com/datasets/borhanitrash/alzheimer-mri-disease-classification-dataset/data) containing binary image data stored in Apache Parquet format. Both datasets contain brain MRI scans used for dementia classification with four severity levels: Non-Demented, Very Mild Demented, Mild Demented, and Moderate Demented. 
 
 ![brain samples](images/brain_samples.png)
 
@@ -34,7 +34,9 @@ This project uses a custom Convolutional Neural Network (CNN) to classify dement
 
 For training, we used the AdamW optimizer with weight decay (1e-4) to improve generalization. The model was trained for 10 epochs with a batch size of 32 images, using CrossEntropyLoss for multi-class classification. A learning rate scheduler (ReduceLROnPlateau) adjusted the learning rate when performance plateaued, and early stopping with model checkpointing ensured the best model was saved based on validation accuracy.
 
-## Results/Data Visualization
+## Results
+
+
 
 
 
