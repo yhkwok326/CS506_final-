@@ -1,31 +1,12 @@
-# CS506_final project
-
 # Alzheimer's Disease MRI Classification Project
 
+### Summary 
 
-
-
-# Project Goals
-
-### Description of the Project
-
-Our goal of this project is to implement deep learning-based system for automated classification of Alzheimer's disease stages using brain MRI scans. The system can categorize scans into four stages: Non-Demented, Very Mild Demented, Mild Demented, and Moderate Demented.
+This project aims to implement deep learning-based system for automated classification of Alzheimer's disease stages using brain MRI scans. The goal of this system is to categorize scans into four stages: Non-Demented, Very Mild Demented, Mild Demented, and Moderate Demented; ultimately aiming to aide with more precise and efficent diagnose of Alzheimers Disease.
 
 ### Data Collection
 
-1. Primary Dataset:
-   
-   1. Dataset 1: https://www.kaggle.com/datasets/lukechugh/best-alzheimer-mri-dataset-99-accuracy/data
-      
-   2. Dataset 2: Kaggle Alzheimer's MRI Dataset (https://www.kaggle.com/datasets/borhanitrash/alzheimer-mri-disease-classification-dataset/data)
-   - Contains labeled MRI scans of brain
-   - Multiple classes representing different stages of Alzheimer's
-   - 6400 images across all classes
-   
-    
-3. Supplementary Datasets:
-   - ADNI (Alzheimer's Disease Neuroimaging Initiative) database
-   - OASIS (Open Access Series of Imaging Studies)
+We began the pipeline by integrating two distinct MRI datasets: a folder-based dataset containing MRI images in standard image formats (JPEG, PNG) organized by impairment level folders [Dataset 1](https://www.kaggle.com/datasets/lukechugh/best-alzheimer-mri-dataset-99-accuracy/data), and a parquet-based dataset containing binary image data stored in Apache Parquet format [Dataset 2](https://www.kaggle.com/datasets/borhanitrash/alzheimer-mri-disease-classification-dataset/data). Both datasets contain brain MRI scans used for dementia classification with four severity levels: Non-Demented (Label 2), Very Mild Demented (Label 3), Mild Demented (Label 0), and Moderate Demented (Label 1). In total, 6400 photos were extracted across all four classes. 
 
 ### Data Cleaning
 1. Direct download from Kaggle platform
@@ -72,3 +53,7 @@ Our goal of this project is to implement deep learning-based system for automate
    - Training set: 70% of total data
    - Testing set: 20% of total data
    - 10% of the data used for validation
+
+3. Supplementary Datasets:
+   - ADNI (Alzheimer's Disease Neuroimaging Initiative) database
+   - OASIS (Open Access Series of Imaging Studies)
