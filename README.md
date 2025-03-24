@@ -6,7 +6,7 @@ This project aims to implement deep learning-based system for automated classifi
 
 ## Data Collection
 
-We began the pipeline by integrating two distinct MRI datasets: a [folder based dataset](https://www.kaggle.com/datasets/lukechugh/best-alzheimer-mri-dataset-99-accuracy/data) containing MRI images in standard image formats (JPEG, PNG) organized by impairment level folders, and a [parquet based dataset](https://www.kaggle.com/datasets/borhanitrash/alzheimer-mri-disease-classification-dataset/data) containing binary image data stored in Apache Parquet format. Both datasets contain brain MRI scans used for dementia classification with four severity levels: Non-Demented (Label 2), Very Mild Demented (Label 3), Mild Demented (Label 0), and Moderate Demented (Label 1). In total, 6400 photos were extracted across all four classes. 
+We began the pipeline by integrating two distinct MRI datasets: a [folder based dataset](https://www.kaggle.com/datasets/lukechugh/best-alzheimer-mri-dataset-99-accuracy/data) containing MRI images in standard image formats (JPEG, PNG) organized by impairment level folders, and a [parquet based dataset](https://www.kaggle.com/datasets/borhanitrash/alzheimer-mri-disease-classification-dataset/data) containing binary image data stored in Apache Parquet format. Both datasets contain brain MRI scans used for dementia classification with four severity levels: Non-Demented (Label 2), Very Mild Demented (Label 3), Mild Demented (Label 0), and Moderate Demented (Label 1). 
 
 ![brain samples](images/brain_samples.png)
 
@@ -29,22 +29,14 @@ Lastly we focused on the lateral ventricles of the MRI images as ventricle enlar
 ![ventricle_extraction](images/feature_extraction.png)
 
 ## Modeling Approach
-1. Primary Model:
-   - Deep Learning using Convolutional Neural Networks (CNN) Tensorflow/Pytorch 
-   
-2. Model Optimization:
-   - Hyperparameter tuning
 
+This project uses a custom Convolutional Neural Network (CNN) to classify dementia based on ventricle features in 128×128 grayscale MRI scans. The model consists of three convolutional blocks that progressively extract important image features, followed by fully connected layers for classification. Each convolutional block increases the number of filters (64 → 128 → 256) and applies convolution, ReLU activation, batch normalization, and max pooling to reduce spatial dimensions while retaining important features. After feature extraction, the model flattens the output and processes it through two fully connected layers (512 and 128 units) with dropout to prevent overfitting.
+
+For training, we used the AdamW optimizer with weight decay (1e-4) to improve generalization. The model was trained for 10 epochs with a batch size of 32 images, using CrossEntropyLoss for multi-class classification. A learning rate scheduler (ReduceLROnPlateau) adjusted the learning rate when performance plateaued, and early stopping with model checkpointing ensured the best model was saved based on validation accuracy.
 
 ## Results/Data Visualization
-1. Pre-training Visualizations:
-   - Sample MRI visualizations across different classes
 
-2. Model Analysis Visualizations:
-   - Confusion matrix
-   - ROC curves and AUC scores for each class
-   - Interactive learning curves (training vs. validation)
-   - Feature maps from different CNN layers
+
 
 
 3. Supplementary Datasets:
