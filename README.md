@@ -20,11 +20,9 @@ To balance the dataset, we employed stratified data splitting using sklearn's **
 
 ## Feature Extraction
 
-We began our feature extraction process by implementing percentile-based normalization. This technique allows us to capture meaningful intensity variations in brain tissue because it effectively removes extreme outliers/noise such as very bright and very dark regions. The pixel values were then rescaled to the range [0-1], focusing on relevant tissue intensities and reducing the impact of outlier pixel values commonly found in MRI images.
+We first applied percentile-based normalization to adjust intensity values while removing extreme outliers like overly bright or dark regions. This helped highlight meaningful brain tissue variations. To ensure consistency and to redue the impact of noise commonly found in MRI scans, pixel values were then rescaled to [0-1]. To enhance structural details, we used Contrast Limited Adaptive Histogram Equalization (CLAHE) with an 8×8 tile grid and a clip limit of 2.0. This helped improve local contrast making brain structures more distinguishable. In addition, the parameters were chosen to balance detail enhancement without over-amplifying noise.
 
-For structure enhancement, we applied Contrast Limited Adaptive Histogram Equalization (CLAHE) with an 8×8 tile grid and a clip limit of 2.0. This approach enhances local contrast, improving the visualization of brain structures. The chosen tile size helps find a balance between local and global contrast enhancement, this is essential because smaller tiles would introduce excessive local detail and noise, while larger tiles would not sufficiently enhance local structures. Moreover, the clip limit of 2.0 prevents over-amplification of noise while still enhancing meaningful contrast.
-
-Lastly we focused on the lateral ventricles of the MRI images as ventricle enlargement is a key biomarker of dementia. First, we inverted the normalized images (1 - normalized_image), making dark ventricles appear bright. For segmentation, we generated ventricle masks by thresholding at 50% of the mean intensity, followed by morphological operations (opening and closing) to refine the binary masks. This threshold was selected to maximize ventricle pixel inclusion while minimizing non-ventricle regions. Opening was applied to remove small noise and weakly connected areas, whereas closing filled small gaps and connected adjacent regions. In general, these steps helped maintain the integrity of ventricle structures while reducing artifacts, with the structuring element size chosen to distinguish between noise and true ventricle features.
+Since ventricle enlargement is a key biomarker for dementia, we focused on segmenting the lateral ventricles. First, we inverted the images so that dark ventricles appeared bright. Then, we created ventricle masks by thresholding at 50% of the mean intensity, followed by morphological operations (opening and closing) to refine the segmentation. These steps helped isolate ventricles while reducing noise and preserving structural integrity.
 
 ![ventricle_extraction](images/feature_extraction.png)
 
@@ -36,6 +34,10 @@ For training, we used the AdamW optimizer with weight decay (1e-4) to improve ge
 
 ## Results
 
+![validation_results](images/validation_results.png)
+
+We loaded a comprehensive dataset with 12,543 ventricle images for training and 1,792 for validation, maintaining consistent class distribution across splits (20.3% Mild Demented, 14.7% Moderate Demented, 35.7% Non Demented, and 29.3% Very Mild Demented). Our training phase consisted of 10 epochs, with notable improvements in accuracy throughout the process. We started with a training accuracy of 56.03% and validation accuracy of 66.41% in epoch 1, and progressively improved to 98.76% training accuracy by epoch 10. The model reached its peak performance in epoch 9 with an accuracy of 99.22%, at which point we saved the best model checkpoint.
+Notably, our per-class validation accuracies show high accuracy for the Moderate Demented class, which is close to 100% for each epoch. And yet this class has the least number of samples. So we may need to oversample the Moderate Demented class to ensure the reliability of the model's accuracy.
 
 
 
