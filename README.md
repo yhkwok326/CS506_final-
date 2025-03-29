@@ -34,7 +34,11 @@ For training, we used the AdamW optimizer with weight decay (1e-4) to improve ge
 
 ## Results
 
-![validation_results](images/accuracy_results.png)
+![validation_results](images/training_curves.png)
+
+![Confusion_matrix](images/confusion_matrix.png)
+
+![visualization_results](images/GradCAM.png)
 
 Our training phase consisted of 10 epochs, with significant improvements in accuracy throughout the process. We started with a training accuracy of 56.03% and validation accuracy of 66.41% in epoch 1, and progressively improved to 98.76% training accuracy by epoch 10. The model reached its peak performance in epoch 9 with an accuracy of 99.22%, at which point we saved the best model checkpoint.
 
