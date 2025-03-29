@@ -36,10 +36,14 @@ For training, we used the AdamW optimizer with weight decay (1e-4) to improve ge
 
 ![validation_results](images/training_curves.png)
 
-![Confusion_matrix](images/confusion_matrix.png)
-
-![visualization_results](images/GradCAM.png)
-
 Our training phase consisted of 10 epochs, with significant improvements in accuracy throughout the process. We started with a training accuracy of 56.03% and validation accuracy of 66.41% in epoch 1, and progressively improved to 98.76% training accuracy by epoch 10. The model reached its peak performance in epoch 9 with an accuracy of 99.22%, at which point we saved the best model checkpoint.
 
 Intrestingly, our per-class validation accuracies show high accuracy for the Moderate Demented class, which is close to 100% for each epoch. Yet, this class has the least number of sample, so we may need to oversample the Moderate Demented class to ensure the reliability of the model's accuracy. In addition, the accuracy of our model seeems extremely high and might have to deal with the simplicity of our current dataset. As such, we are working on obtaining more images from supplementary datasets from ADNI (Alzheimer's Disease Neuroimaging Initiative) databas and OASIS (Open Access Series of Imaging Studies) to increase the overall range our model can cover in MRI brain scans.
+
+![Confusion_matrix](images/confusion_matrix.png)
+Confusion matrix revealed most misclassifications occurred between:
+- Non-Demented and Very Mild Demented classes (67 cases)
+- Mild Demented and Very Mild Demented classes (19 cases)
+
+GRADCAM visualization
+![visualization_results](images/GradCAM.png)
