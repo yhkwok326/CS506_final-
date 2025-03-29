@@ -28,18 +28,19 @@ Since ventricle enlargement is a key biomarker for dementia, we focused on segme
 
 ## Modeling Approach
 
-This project uses a custom Convolutional Neural Network (CNN) to classify dementia based on ventricle features in 128×128 grayscale MRI scans. The model consists of three convolutional blocks that progressively extract important image features, followed by fully connected layers for classification. Each convolutional block increases the number of filters (64 → 128 → 256) and applies convolution, ReLU activation, batch normalization, and max pooling to reduce spatial dimensions while retaining important features. After feature extraction, the model flattens the output and processes it through two fully connected layers (512 and 128 units) with dropout to prevent overfitting.
+This project uses a custom CNN to classify dementia from 128×128 grayscale MRI scans by analyzing ventricle features. The model has two convolutional blocks that extract important details—each block applies convolution, ReLU activation, batch normalization, and max pooling to reduce image size while keeping key features. The first block uses 64 filters, and the second increases to 128 to capture more complex patterns. After feature extraction, the model flattens the data and processes it through two dense layers (512 and 128 units) with dropout (30% and 20%) to prevent overfitting. Despite its compact design, the model performs well, achieving 95.2% accuracy on the test set while remaining efficient.
 
 For training, we used the AdamW optimizer with weight decay (1e-4) to improve generalization. The model was trained for 10 epochs with a batch size of 32 images, using CrossEntropyLoss for multi-class classification. A learning rate scheduler (ReduceLROnPlateau) adjusted the learning rate when performance plateaued, and early stopping with model checkpointing ensured the best model was saved based on validation accuracy.
 
-## Results
+## Training Results
 
 ![validation_results](images/training_curves.png)
 
-Our training phase consisted of 10 epochs, with significant improvements in accuracy throughout the process. We started with a training accuracy of 56.03% and validation accuracy of 66.41% in epoch 1, and progressively improved to 98.76% training accuracy by epoch 10. The model reached its peak performance in epoch 9 with an accuracy of 99.22%, at which point we saved the best model checkpoint.
+Our training phase consisted of 10 epochs, with significant improvements in accuracy throughout the process. Starting at 47.29% training accuracy in epoch 1, we rapidly progressed to 98.25% by epoch 10. The model showed impressive validation performance, beginning at 59.21% and reaching 95.87% by the final epoch.
 
 Intrestingly, our per-class validation accuracies show high accuracy for the Moderate Demented class, which is close to 100% for each epoch. Yet, this class has the least number of sample, so we may need to oversample the Moderate Demented class to ensure the reliability of the model's accuracy. In addition, the accuracy of our model seeems extremely high and might have to deal with the simplicity of our current dataset. As such, we are working on obtaining more images from supplementary datasets from ADNI (Alzheimer's Disease Neuroimaging Initiative) databas and OASIS (Open Access Series of Imaging Studies) to increase the overall range our model can cover in MRI brain scans.
 
+## Testing results 
 ![Confusion_matrix](images/confusion_matrix.png)
 Confusion matrix revealed most misclassifications occurred between:
 - Non-Demented and Very Mild Demented classes (67 cases)
