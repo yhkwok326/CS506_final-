@@ -42,10 +42,7 @@ Intrestingly, our per-class validation accuracies show high accuracy for the Mod
 
 ## Testing results 
 ![Confusion_matrix](images/confusion_matrix.png)
-The main confusion occurred between:
-
-- Non-Demented and Very Mild Demented classes (67 cases)
-- Very Mild Demented and Non-Demented classes (50 cases)
+The main confusion occurred between Non-Demented and Very Mild Demented classes
 
 GRADCAM visualization
 ![visualization_results](images/GradCAM.png)
