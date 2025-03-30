@@ -1,5 +1,7 @@
 # Alzheimer's Disease MRI Classification
 
+youtube link for the Midterm report: https://youtu.be/S3uqu7vGLwc
+
 ## Summary 
 
 This project aims to implement deep learning-based system for automated classification of Alzheimer's disease stages using brain MRI scans. The goal of this system is to categorize scans into four stages: Non-Demented, Very Mild Demented, Mild Demented, and Moderate Demented; ultimately aiming to aide with more precise and efficent diagnose of Alzheimers Disease.
