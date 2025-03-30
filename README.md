@@ -42,7 +42,8 @@ Intrestingly, our per-class validation accuracies show high accuracy for the Mod
 
 ## Testing results 
 ![Confusion_matrix](images/confusion_matrix.png)
-The main confusion occurred between Non-Demented and Very Mild Demented classes
+The model achieved a 95.2% overall accuracy. A detailed classification report showed strong class-specific performance: Mild Demented (96.23% F1-score), Moderate Demented (100% F1-score), Non-Demented (94.76% F1-score), and Very Mild Demented (92.63% F1-score). The confusion matrix revealed most misclassifications occurred between Non-Demented and Very Mild Demented (67 cases).
 
 GRADCAM visualization
 ![visualization_results](images/GradCAM.png)
+Using Grad-CAM, we applied gradient hooks to the final convolutional layer and enhanced the standard approach with absolute gradient values to capture negative activations. The visualizations revealed class-specific ventricle patterns: Mild Dementia showed scattered and irregular regions; Moderate Dementia displayed pronounced, butterfly-shaped enlargements; Non-Dementia exhibited symmetrically normal structures; and Very Mild Dementia had subtle enlargements with minor irregularities. 
