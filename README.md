@@ -1,6 +1,6 @@
 # Alzheimer's Disease MRI Classification
 
-youtube link for the Midterm report: https://youtu.be/S3uqu7vGLwc
+youtube link for the Midterm report: https://youtu.be/vV8o-egBJ6o
 
 ## Summary 
 
