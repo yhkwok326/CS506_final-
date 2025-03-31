@@ -16,7 +16,7 @@ We began the pipeline by integrating two distinct MRI datasets: a [folder based 
 
 For data standardization, we applied several procedures to the raw images. These included dimension normalization where all images were resized to 128×128 pixels, conversion to grayscale (single-channel) to ensure consistent formatting, and intensity scaling where pixel values were normalized to the range [0-1] by dividing by 255 to ensure compatibility with neural networks.
 
-To balance the dataset, we employed stratified data splitting using sklearn's **train_test_split function** to maintain class distribution, resulting in a three-way partition: 70% for training, 10% for validation, and 20% for testing. The directories were organized with structured folders following a train/val/test organization, each containing class subfolders. This approach ensured that the proportion of diagnostic classes was preserved in each split, supporting proper model training and evaluation.
+To balance the dataset, we employed stratified data splitting using sklearn's train_test_split function to maintain class distribution, resulting in a three-way partition: **70% for training, 10% for validation, and 20% for testing**. The directories were organized with structured folders following a train/val/test organization, each containing class subfolders. This approach ensured that the proportion of diagnostic classes was preserved in each split, supporting proper model training and evaluation.
 
 ![class_distribution](images/class_distribution.png)
 
