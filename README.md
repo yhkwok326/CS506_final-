@@ -54,4 +54,7 @@ Using Grad-CAM, we applied gradient hooks to the final convolutional layer and e
 
 ## MRI Classifier 
 
+We created an MRI classifier tool that tests our deep learning model on new brain images. Our tool processes MRI scans to highlight ventricle features, then predicts whether the scan shows Non-Demented, Mild, Moderate, or Very Mild dementia. This allows us to evaluate how well our model performs on different datasets.
+
+Example of running out code: 
 Type python simple_mri_classifier.py --image 14.png --model best_model.pt
