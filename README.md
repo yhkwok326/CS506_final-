@@ -23,9 +23,9 @@ To balance the dataset, we employed stratified data splitting using sklearn's tr
 
 ## Feature Extraction
 
-We first applied percentile-based normalization to adjust intensity values while removing extreme outliers like overly bright or dark regions. This helped highlight meaningful brain tissue variations. To ensure consistency and to redue the impact of noise commonly found in MRI scans, pixel values were then rescaled to [0-1]. To enhance structural details, we used Contrast Limited Adaptive Histogram Equalization (CLAHE) with an 8×8 tile grid and a clip limit of 2.0. This helped improve local contrast making brain structures more distinguishable. In addition, the parameters were chosen to balance detail enhancement without over-amplifying noise.
+To ensure consistency and to reduce the impact of noise commonly found in MRI scans, pixel values were rescaled to [0-1]. To enhance structural details, we used Contrast Limited Adaptive Histogram Equalization (CLAHE) with an 8×8 tile grid and a clip limit of 2.0. This helped improve local contrast making brain structures more distinguishable. The parameters were chosen to balance detail enhancement without over-amplifying noise.
 
-Since ventricle enlargement is a key biomarker for dementia, we focused on segmenting the lateral ventricles. First, we inverted the images so that dark ventricles appeared bright. Then, we created ventricle masks by thresholding at 50% of the mean intensity, followed by morphological operations (opening and closing) to refine the segmentation. These steps helped isolate ventricles while reducing noise and preserving structural integrity.
+Since ventricle enlargement is a key biomarker for dementia, we focused on segmenting the lateral ventricles. First, we inverted the images so that dark ventricles appeared bright. Then, we created ventricle masks using Otsu thresholding, an adaptive method that automatically determines the optimal threshold value, followed by applying a 50% factor to this threshold. We then applied morphological operations (opening and closing) to refine the segmentation. These steps helped isolate ventricles while reducing noise and preserving structural integrity.
 
 ![ventricle_extraction](images/feature_extraction.png)
 
