@@ -49,7 +49,7 @@ Intrestingly, our per-class validation accuracies show high accuracy for the Mod
 The model achieved a 95.2% overall accuracy. A detailed classification report showed strong class-specific performance: Mild Demented (96.23% F1-score), Moderate Demented (100% F1-score), Non-Demented (94.76% F1-score), and Very Mild Demented (92.63% F1-score). The confusion matrix revealed most misclassifications occurred between Non-Demented and Very Mild Demented (67 cases).
 
 GRADCAM visualization
-![visualization_results](images/GradCAM.png)
+![visualization_results](images/HeatMap.png)
 Using Grad-CAM, we applied gradient hooks to the final convolutional layer and enhanced the standard approach with absolute gradient values to capture negative activations. 
 
 ## MRI Classifier 
