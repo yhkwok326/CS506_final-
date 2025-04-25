@@ -51,3 +51,7 @@ The model achieved a 95.2% overall accuracy. A detailed classification report sh
 GRADCAM visualization
 ![visualization_results](images/GradCAM.png)
 Using Grad-CAM, we applied gradient hooks to the final convolutional layer and enhanced the standard approach with absolute gradient values to capture negative activations. 
+
+## MRI Classifier 
+
+Type python simple_mri_classifier.py --image 14.png --model best_model.pt
