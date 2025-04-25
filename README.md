@@ -49,6 +49,7 @@ The model achieved a 95.2% overall accuracy. A detailed classification report sh
 
 ## GRADCAM visualization
 ![visualization_results](images/HeatMap.png)
+
 This heat map visualization shows which regions of the brain MRI the neural network is focusing on when making its classification decision. The red/orange areas indicate regions with the highest activation or influence on the model's prediction, while blue areas represent regions with minimal influence.
 
 ## MRI Classifier 
