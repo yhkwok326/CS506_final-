@@ -2,7 +2,6 @@
 
 youtube link for the Midterm report: https://youtu.be/vV8o-egBJ6o
 
-new_dataset: https://www.kaggle.com/datasets/uraninjo/augmented-alzheimer-mri-dataset
 
 ## Summary 
 
@@ -54,7 +53,8 @@ Using Grad-CAM, we applied gradient hooks to the final convolutional layer and e
 
 ## MRI Classifier 
 
-We created an MRI classifier tool that tests our deep learning model on new brain images. Our tool processes MRI scans to highlight ventricle features, then predicts whether the scan shows Non-Demented, Mild, Moderate, or Very Mild dementia. This allows us to evaluate how well our model performs on different datasets.
+We created an MRI classifier tool that tests our deep learning model on new brain images. Our tool processes MRI scans to highlight ventricle features, then predicts whether the scan shows Non-Demented, Mild, Moderate, or Very Mild dementia. This allows us to evaluate how well our model performs on different datasets (https://www.kaggle.com/datasets/uraninjo/augmented-alzheimer-mri-dataset).
+
 
 Example of running out code: 
 Type python simple_mri_classifier.py --image 14.png --model best_model.pt
