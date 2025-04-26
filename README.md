@@ -1,11 +1,11 @@
 # Alzheimer's Disease MRI Classification
 
 youtube link for the Midterm report: https://youtu.be/vV8o-egBJ6o
-
+youtube link for Final Report: 
 
 ## Summary 
 
-This project aims to implement deep learning-based system for automated classification of Alzheimer's disease stages using brain MRI scans. The goal of this system is to categorize scans into four stages: Non-Demented, Very Mild Demented, Mild Demented, and Moderate Demented; ultimately aiming to aide with more precise and efficent diagnose of Alzheimers Disease.
+This project is to implement a deep learning-based model for automated classification of Alzheimer's disease stages using brain MRI scans. The goal of this model is to categorize scans into four stages: Non-Demented, Very Mild Demented, Mild Demented, and Moderate Demented; ultimately aiming to aide with more precise and efficent diagnose of Alzheimers Disease.
 
 ## Data Collection
 
@@ -52,13 +52,21 @@ The model achieved a 95.2% overall accuracy. A detailed classification report sh
 
 This heat map visualization shows which regions of the brain MRI the neural network is focusing on when making its classification decision. The red/orange areas indicate regions with the highest activation or influence on the model's prediction, while blue areas represent regions with minimal influence.
 
-## MRI Classifier 
+## Usage 
 
-We created an MRI classifier tool that tests our deep learning model on new brain images. Our tool processes MRI scans to highlight ventricle features, then predicts whether the scan shows Non-Demented, Mild, Moderate, or Very Mild dementia. This allows us to evaluate how well our model performs on different datasets (https://www.kaggle.com/datasets/uraninjo/augmented-alzheimer-mri-dataset).
+Here, we created a simple brain MRI classifier tool that tests our deep learning model on new brain images. Our tool processes MRI scans to highlight ventricle features, then predicts whether the scan shows Non-Demented, Mild, Moderate, or Very Mild dementia. 
 
+To see how our model performs on a new dataset (brain scan images but untrained/untested, used phash to confirm dissimilarity between our training and testing data), you can first proceed to downlaod the zip file containing brain MRI scan images from [this kaggle website] (https://www.kaggle.com/datasets/uraninjo/augmented-alzheimer-mri-dataset).
 
-Example of running out code: 
+Once downloaded, proceed to your directory containing our **python_mri_dementia_classification** and run the following code in your terminal to train retrieve the model and allow the model to normalize and extract features from this dataset. 
 
-1) Download the zip file from Kaggle
-2) Execute [python mri_dementia_classification.py --zip_file1 "Alzheimer MRI Disease Classification Dataset-2.zip" --zip_file2 "Combined Dataset.zip" --output_dir "Combined_MRI_Dataset" --epochs 10] to get the model
-3) Execute [simple_mri_classifier.py --image 14.png --model best_model.pt] to test the new data 
+```
+python mri_dementia_classification.py --zip_file1 "Alzheimer MRI Disease Classification Dataset-2.zip" --zip_file2 "Combined Dataset.zip" --output_dir "Combined_MRI_Dataset" --epochs 10
+```
+Then, execute the following to see whether the model correctly predicts the image class or not
+
+```
+simple_mri_classifier.py --image 14.png --model best_model.pt
+```
+
+If you would like to test on other images on this dataset, simply switch out image 14.png for any image of your choice!
