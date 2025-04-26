@@ -58,4 +58,7 @@ We created an MRI classifier tool that tests our deep learning model on new brai
 
 
 Example of running out code: 
-Type python simple_mri_classifier.py --image 14.png --model best_model.pt
+
+1) Download the zip file from Kaggle
+2) Execute [python mri_dementia_classification.py --zip_file1 "Alzheimer MRI Disease Classification Dataset-2.zip" --zip_file2 "Combined Dataset.zip" --output_dir "Combined_MRI_Dataset" --epochs 10] to get the model
+3) Execute [simple_mri_classifier.py --image 14.png --model best_model.pt] to test the new data 
