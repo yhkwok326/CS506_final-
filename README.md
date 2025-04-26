@@ -55,11 +55,11 @@ This heat map visualization shows which regions of the brain MRI the neural netw
 
 ## Usage 
 
-Here, we created a simple brain MRI classifier tool that tests our deep learning model on new brain images. Our tool processes MRI scans to highlight ventricle features, then predicts whether the scan shows Non-Demented, Mild, Moderate, or Very Mild dementia. 
+Here, we developed a simple brain MRI classifier that tests a deep learning model on new brain images. Our tool processes MRI scans to highlight ventricle features and predicts whether a scan indicates Non-Demented, Very Mild, Mild, or Moderate dementia.
 
-To see how our model performs on a new dataset (brain scan images but untrained/untested, used phash to confirm dissimilarity between our training and testing data), you can first proceed to downlaod the zip file containing brain MRI scan images from [this kaggle website] (https://www.kaggle.com/datasets/uraninjo/augmented-alzheimer-mri-dataset).
+To evaluate the model's performance on a new dataset (consisting of unseen brain scan images, confirmed to be distinct from our training set using perceptual hashing), first download the ZIP file containing brain MRI images from this [Kaggle dataset](https://www.kaggle.com/datasets/uraninjo/augmented-alzheimer-mri-dataset).
 
-Once downloaded, proceed to your directory containing our **python_mri_dementia_classification** and run the following code in your terminal to train retrieve the model and allow the model to normalize and extract features from this dataset. 
+After downloading, navigate to the directory containing the **python_mri_dementia_classification.py** script and run the following command in your terminal to retrieve the model and allow it to normalize and extract features from the new dataset:
 
 ```
 python mri_dementia_classification.py --zip_file1 "Alzheimer MRI Disease Classification Dataset-2.zip" --zip_file2 "Combined Dataset.zip" --output_dir "Combined_MRI_Dataset" --epochs 10
