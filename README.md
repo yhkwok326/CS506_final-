@@ -59,7 +59,7 @@ Here, we developed a simple brain MRI classifier that tests a deep learning mode
 
 To evaluate the model's performance on a new dataset (consisting of unseen brain scan images, confirmed to be distinct from our training set using perceptual hashing), first download the ZIP file containing brain MRI images from this [Kaggle dataset](https://www.kaggle.com/datasets/uraninjo/augmented-alzheimer-mri-dataset).
 
-After downloading the files, navigate to the directory containing the **mriclassifier.mk** script and run the following command in your terminal:
+After downloading the files, navigate to the directory containing the **mriclassifier.mk** script and run the following command in your conda environment:
 
 ```
 make -f mriclassifier.mk
@@ -72,6 +72,7 @@ Alternatively, if you prefer to run the scripts manually without using the Makef
 First, run the following command to retrieve the model, normalize, and extract features from the new dataset:
 
 ```
+pip install -r requirements.txt
 python mri_dementia_classification.py --zip_file1 "Alzheimer MRI Disease Classification Dataset-2.zip" --zip_file2 "Combined Dataset.zip" --output_dir "Combined_MRI_Dataset" --epochs 10
 ```
 
