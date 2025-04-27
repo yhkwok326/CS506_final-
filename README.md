@@ -59,15 +59,26 @@ Here, we developed a simple brain MRI classifier that tests a deep learning mode
 
 To evaluate the model's performance on a new dataset (consisting of unseen brain scan images, confirmed to be distinct from our training set using perceptual hashing), first download the ZIP file containing brain MRI images from this [Kaggle dataset](https://www.kaggle.com/datasets/uraninjo/augmented-alzheimer-mri-dataset).
 
-After downloading, navigate to the directory containing the **mri_dementia_classification.py** script and run the following command in your terminal to retrieve the model and allow it to normalize and extract features from the new dataset:
+After downloading the files, navigate to the directory containing the **mriclassifier.mk** script and run the following command in your terminal:
+
+```
+make -f mriclassifier.mk
+```
+Running this command will install the required dependencies, retrieve the model, normalize and extract features from the new dataset, and make a prediction for a sample image.
+
+---
+Alternatively, if you prefer to run the scripts manually without using the Makefile, follow these steps after downloading the zip files from the Kaggle website:
+
+First, run the following command to retrieve the model, normalize, and extract features from the new dataset:
 
 ```
 python mri_dementia_classification.py --zip_file1 "Alzheimer MRI Disease Classification Dataset-2.zip" --zip_file2 "Combined Dataset.zip" --output_dir "Combined_MRI_Dataset" --epochs 10
 ```
-Then, execute the following to see whether the model correctly predicts the image class or not
+
+Next, execute the following command to test if the model correctly predicts the class of an image:
 
 ```
 simple_mri_classifier.py --image 14.png --model best_model.pt
 ```
 
-If you would like to test on other images on this dataset, simply switch out image 14.png for any image of your choice!
+To test other images from the dataset, simply replace 14.png with the filename of any image you would like to classify!
