@@ -46,7 +46,7 @@ Intrestingly, our per-class validation accuracies show high accuracy for the Mod
 
 ## Testing results 
 ![Confusion_matrix](images/confusion_matrix.png)
-The model achieved a 95.2% overall accuracy. A detailed classification report showed strong class-specific performance: Mild Demented (96.23% F1-score), Moderate Demented (100% F1-score), Non-Demented (94.76% F1-score), and Very Mild Demented (92.63% F1-score). The confusion matrix revealed most misclassifications occurred between Non-Demented and Very Mild Demented (67 cases).
+The model achieved a 93.05% overall accuracy, with detailed metrics showing excellent class-specific performance: perfect classification for Moderate Demented cases (100% precision/recall/F1-score), strong results for Mild Demented (95.55% precision, 94.50% recall, 95.02% F1-score), and slightly lower but still robust performance for Non-Demented (90.59% precision, 94.06% recall, 92.30% F1-score) and Very Mild Demented (90.88% precision, 87.33% recall, 89.07% F1-score). The confusion matrix revealed the most common misclassifications occurred between Non-Demented and Very Mild Demented (66 cases) and Mild Demented and Very Mild Demented (26 cases).
 
 ## GRADCAM visualization
 ![visualization_results](images/HeatMap.png)
