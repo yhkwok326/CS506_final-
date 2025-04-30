@@ -57,7 +57,9 @@ This heat map visualization shows which regions of the brain MRI the neural netw
 
 Here, we developed a simple brain MRI classifier that tests a deep learning model on new brain images. Our tool processes MRI scans to highlight ventricle features and predicts whether a scan indicates Non-Demented, Very Mild, Mild, or Moderate dementia.
 
-To evaluate the model's performance on a new dataset (consisting of unseen brain scan images, confirmed to be distinct from our training set using perceptual hashing), first download the ZIP file containing brain MRI images from this [Kaggle dataset](https://www.kaggle.com/datasets/uraninjo/augmented-alzheimer-mri-dataset).
+To evaluate the model's performance on a new dataset (consisting of unseen brain scan images, confirmed to be distinct from our training set using perceptual hashing), first download the ZIP file containing brain MRI images from this [Kaggle dataset zip file 1](https://www.kaggle.com/datasets/borhanitrash/alzheimer-mri-disease-classification-dataset/data?select=Alzheimer+MRI+Disease+Classification+Dataset) and [Kaggle dataset zip file 2](https://www.kaggle.com/datasets/lukechugh/best-alzheimer-mri-dataset-99-accuracy/data)
+
+
 
 After downloading the files, navigate to the directory containing the **mriclassifier.mk** script and run the following command in your conda environment:
 
@@ -83,3 +85,5 @@ simple_mri_classifier.py --image 14.png --model best_model.pt
 ```
 
 To test other images from the dataset, simply replace 14.png with the filename of any image you would like to classify!
+Here is a new Dataset that you can try [Kaggle dataset](https://www.kaggle.com/datasets/uraninjo/augmented-alzheimer-mri-dataset).
+
