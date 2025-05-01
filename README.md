@@ -39,6 +39,8 @@ For training, we used the AdamW optimizer with weight decay (1e-4) to improve ge
 ## Training Results
 
 ![validation_results](images/n_leanringcurve.png)
+
+
 ![validation_results1](images/n_leanringcurve1.png)
 
 The model was trained for 10 epochs on 12,543 images, with 1,792 images used for validation. Starting at 48% training accuracy in the first epoch, it improved steadily, reaching 96% accuracy by the final epoch. Validation accuracy followed a similar trend, starting at 58% and ending at 91%. Training remained stable throughout, with no signs of overfitting. These results show the model learned effectively while maintaining a good performance.
