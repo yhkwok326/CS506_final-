@@ -40,18 +40,17 @@ For training, we used the AdamW optimizer with weight decay (1e-4) to improve ge
 
 ![validation_results](images/training_curves.png)
 
-Our training phase consisted of 10 epochs, with significant improvements in accuracy throughout the process. Starting at 47.29% training accuracy in epoch 1, progressed to 98.25% by epoch 10. The model showed high validation performance, beginning at 59.21% and reaching 95.87% by the final epoch.
-
-Intrestingly, our per-class validation accuracies show high accuracy for the Moderate Demented class, which is close to 100% for each epoch. Yet, this class has the least number of sample, so we may need to oversample the Moderate Demented class to ensure the reliability of the model's accuracy. In addition, the accuracy of our model seeems extremely high and might have to deal with the simplicity of our current dataset. As such, we are working on obtaining more images from supplementary datasets from ADNI (Alzheimer's Disease Neuroimaging Initiative) databas and OASIS (Open Access Series of Imaging Studies) to increase the overall range our model can cover in MRI brain scans.
+The model was trained for 10 epochs on 12,543 images, with 1,792 images used for validation. Starting at 48% training accuracy in the first epoch, it improved steadily, reaching 96% accuracy by the final epoch. Validation accuracy followed a similar trend, starting at 58% and ending at 91%. Training remained stable throughout, with no signs of overfitting. These results show the model learned effectively while maintaining a good performance.
 
 ## Testing results 
 ![Confusion_matrix](images/confusion_matrix.png)
-The model achieved a 93.05% overall accuracy, with detailed metrics showing excellent class-specific performance: perfect classification for Moderate Demented cases (100% precision/recall/F1-score), strong results for Mild Demented (95.55% precision, 94.50% recall, 95.02% F1-score), and slightly lower but still robust performance for Non-Demented (90.59% precision, 94.06% recall, 92.30% F1-score) and Very Mild Demented (90.88% precision, 87.33% recall, 89.07% F1-score). The confusion matrix revealed the most common misclassifications occurred between Non-Demented and Very Mild Demented (66 cases) and Mild Demented and Very Mild Demented (26 cases).
+
+Our trained VentricleCNN model achieves an impressive overall accuracy of 91.41% in evaluation, with detailed metrics showing particularly strong performance for Moderate_Demented cases (high precision and recall) and Mild_Demented cases (95% precision, 94.5% recall). However, the model faces challenges in differentiating between Non_Demented and Very_Mild_Demented cases, with 66 misclassifications, suggesting that while it excels at identifying later-stage dementia, it struggles with the subtle anatomical changes characteristic of early dementia progression.
 
 ## GRADCAM visualization
 ![visualization_results](images/HeatMap.png)
 
-This heat map visualization shows which regions of the brain MRI the neural network is focusing on when making its classification decision. The red/orange areas indicate regions with the highest activation or influence on the model's prediction, while blue areas represent regions with minimal influence.
+To better understand the model's decision-making patterns, we employ a specialized Grad-CAM visualization technique tailored for ventricle masks. Using a hook mechanism on the second convolutional layer, we capture both feature maps during the forward pass and gradient flow during backpropagation. This enables us to generate attention heatmaps by computing a weighted combination of activation maps based on gradient importance, revealing which brain regions most strongly influence the model's predictions. In these visualizations, red and orange areas highlight regions with the highest predictive influence, while blue areas indicate minimal contribution. Interestingly, even when enhancing the ventricle region, we observe that the model relies on broader brain regions for classification, suggesting it incorporates contextual features beyond just ventricular structures.
 
 ## Usage 
 
